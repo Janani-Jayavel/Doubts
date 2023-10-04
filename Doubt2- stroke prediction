@@ -1,0 +1,10 @@
+Feature : BMI
+
+I need to fill the null value for BMI by groupby with 'age','gender','work_type'
+which am implementing via class :columntransformer_num
+
+Its working fine seperately
+
+now, i need to perform scaling on top of this BMI column (after implementing groupby)
+i.e., i need to combine it with numerical preprocessing pipeline for scaling.
+
