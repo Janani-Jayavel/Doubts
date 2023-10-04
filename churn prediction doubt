@@ -1,0 +1,15 @@
+# Imputation with 'TotalCharges' Feature:
+------------------------------------------
+Total Charges has null Value as space ' ', so need to replac with NaN value
+Do fillna by grouping it with - 'InternetService','OnlineSecurity','DeviceProtection','StreamingTV','StreamingMovies','Contract'
+Datatype of 'TotalCharges' column is Object; which needs to be converted to numeric
+
+I am trying to do all this in my custom transformer class called - 'custom_transformer'
+This custom transformer is working fine seperately.
+
+Now, after this preprocessing, I need to feed the total charges to numerical preprocessing for Scaling.
+But, if i pass this feature 'Totalcharge' in columntransformer to it is throwing error as it is still treated as object data type
+
+I tried to put this custom_transformer in pipeline along with numeric pipeline but while passing the column list in column transformer,
+I am not able to pass the other non-numerical columns ('InternetService','OnlineSecurity','DeviceProtection','StreamingTV','StreamingMovies','Contract')
+that is actually needed for groupy
